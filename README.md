@@ -7,15 +7,8 @@
 
 Each line of a crontab file represents a job, and looks like this:
 
- ┌───────────── minute (0 - 59)
- │ ┌───────────── hour (0 - 23)
- │ │ ┌───────────── day of the month (1 - 31)
- │ │ │ ┌───────────── month (1 - 12)
- │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
- │ │ │ │ │                                   7 is also Sunday on some systems)
- │ │ │ │ │
- │ │ │ │ │
- * * * * * <command to execute>
+ ![image](https://user-images.githubusercontent.com/59032477/217307097-14637bf3-09a7-4eca-9d51-d92e71737803.png)
+
 The syntax of each line expects a cron expression made of five fields which represent the time to execute the command, followed by a shell command to execute.
 
 # Examples

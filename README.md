@@ -7,7 +7,7 @@
 
 Each line of a crontab file represents a job, and looks like this:
 
- ![image](https://user-images.githubusercontent.com/59032477/217307097-14637bf3-09a7-4eca-9d51-d92e71737803.png)
+![image](https://user-images.githubusercontent.com/59032477/217310663-56e16768-5fdb-4543-87bf-d9fc32d41264.png)
 
 The syntax of each line expects a cron expression made of five fields which represent the time to execute the command, followed by a shell command to execute.
 

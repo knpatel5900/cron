@@ -7,13 +7,27 @@
 
 Each line of a crontab file represents a job, and looks like this:
 
-# ┌───────────── minute (0 - 59)
-# │ ┌───────────── hour (0 - 23)
-# │ │ ┌───────────── day of the month (1 - 31)
-# │ │ │ ┌───────────── month (1 - 12)
-# │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
-# │ │ │ │ │                                   7 is also Sunday on some systems)
-# │ │ │ │ │
-# │ │ │ │ │
-# * * * * * <command to execute>
+ ┌───────────── minute (0 - 59)
+ │ ┌───────────── hour (0 - 23)
+ │ │ ┌───────────── day of the month (1 - 31)
+ │ │ │ ┌───────────── month (1 - 12)
+ │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
+ │ │ │ │ │                                   7 is also Sunday on some systems)
+ │ │ │ │ │
+ │ │ │ │ │
+ * * * * * <command to execute>
 The syntax of each line expects a cron expression made of five fields which represent the time to execute the command, followed by a shell command to execute.
+
+# Examples
+
+## the following clears the Apache error log at one minute past midnight (00:01) every day, assuming that the default shell for the cron user is Bourne shell compliant:
+
+    1 0 * * * printf "" > /var/log/apache/error_log
+    
+## This example runs a shell program called export_dump.sh at 23:45 (11:45 PM) every Saturday.
+
+    45 23 * * 6 /home/oracle/scripts/export_dump.sh
+
+## The below would output "hello world" to the command line every 5th minute of every first, second and third hour (i.e., 01:00, 01:05, 01:10, up until 03:55).
+    
+    */5 1,2,3 * * * echo hello world

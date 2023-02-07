@@ -1,4 +1,4 @@
-# cron
+# Cron
 
 ![Set Up SSH Connections to AWS CodeCommit Repositories](https://res-1.cloudinary.com/hv4xf2jgd/image/upload/q_auto/v1/images/cron_expression_syntax.png)
 
